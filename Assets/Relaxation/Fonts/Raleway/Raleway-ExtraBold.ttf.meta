@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b1ee8f4563727422b877bc2015116aa5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Raleway ExtraBold
+  fontNames:
+  - Raleway ExtraBold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 92eba7d10e2fa41d1acd560b2b3bc38b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

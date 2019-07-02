@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c6e05829867cc4b329b0f5c27e5cdc78
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Raleway Thin
+  fontNames:
+  - Raleway Thin
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9472538fd512244a78cb8fa3b261f61d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

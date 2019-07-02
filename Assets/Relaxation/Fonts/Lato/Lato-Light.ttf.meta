@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 655d6a494ea88479084bfe4368bdd4cf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lato Light
+  fontNames:
+  - Lato Light
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4cb8b212b38f74301a82894aa288ab67, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
