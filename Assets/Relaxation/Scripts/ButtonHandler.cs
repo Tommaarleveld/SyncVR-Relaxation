@@ -40,10 +40,10 @@ public class ButtonHandler : MonoBehaviour
 
     IEnumerator hideCloseCanvas(){
         //Set the timer to 10 seconds
-        targetTime = 10;
+        targetTime = 6;
         
         //Wait for 10 seconds
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(6);
 
         //Hide the close menu canvas
         finalCloseMenuCanvas.SetActive(false);
