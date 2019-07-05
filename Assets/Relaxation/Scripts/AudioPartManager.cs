@@ -9,6 +9,7 @@ public class AudioPartManager : MonoBehaviour
     {
         yield return null;
 
+        //Call the function playAudioSequentially(), from the PlayFragmentsAudio.cs, for each audiopart.
         for (int i = 0; i < audioParts.Count; i++){
             yield return StartCoroutine(audioParts[i].playAudioSequentially());
         }

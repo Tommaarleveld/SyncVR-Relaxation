@@ -22,12 +22,13 @@ public class PlayFragmentsAudio : MonoBehaviour {
 	{
 		yield return null;
 
-		//1.Loop through each AudioClip
+		//Loop through each AudioClip
 		for (int i = 0; i < clips.Length; i++)
 		{
-			//2.Assign current AudioClip to audiosource
+			// Assign current AudioClip to audiosource
 			audioSource.clip = clips[i];
 
+			//Check the delaytime, if its longer than 20 seconds get the BPM state and play the feedback accordingly
 			if (delays[i] >= 20 && ObservePulseData.getBPMState() != "NEUTRAL"){
 				//Wait for the first half of the delay	
 				yield return new WaitForSeconds(delays[i] / 2);
@@ -42,6 +43,7 @@ public class PlayFragmentsAudio : MonoBehaviour {
 				}
 				else if(ObservePulseData.getBPMState() == "DESCENDING"){
 					Debug.Log("General feedback is supposed to start playing now");
+					//Play the feedback and wait for it to finish playing.
 					playBPMScript.giveBPMFeedback();
 					while (playBPMScript.audioSource.isPlaying){
 					yield return null;
