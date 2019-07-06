@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 4b27fbd423ee9422782b8923ec4dce3c
   - enabled: 1
     path: Assets/Scenes/Oefening1Intro.unity
     guid: 83eda8fc4d36b4f22ab650683b1bb173
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Oefening1.unity
     guid: f770ac1b5f3344fffb9e7d3e3b611438
   - enabled: 0
@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Oefening2.unity
     guid: c13dc616e62d14f1e913fd9cb205bf9d
   - enabled: 0
-    path: Assets/Scenes/Test.unity
-    guid: 56fcd93ed865e42b1b594d7415c958db
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Oefening3Intro.unity
     guid: fcc30ba5f30be4a968c0365b8831b799

@@ -9,9 +9,11 @@ public class ButtonHandler : MonoBehaviour
     public GameObject firstCloseMenuCanvas;
     public GameObject finalCloseMenuCanvas;
     public GameObject finalCloseMenuTimer;
+    private CanvasGroup canvasGroup;
     private float targetTime;
     
     public void Start(){
+        canvasGroup = gameObject.AddComponent<CanvasGroup>();
     }
     public void Update(){
         //Call function to countdown the final close menu inactivity timer
@@ -32,24 +34,25 @@ public class ButtonHandler : MonoBehaviour
         finalCloseMenuCanvas.SetActive(true);
 
         //Hide the initial close menu button
-        firstCloseMenuCanvas.GetComponent<Renderer>().enabled = false;
+        // firstCloseMenuCanvas.transform.localScale = new Vector3(0, 0, 0);
+        canvasGroup.alpha = 0f;
 
         //Start the function to hide the close menu screen again
         StartCoroutine(hideCloseCanvas());
     }
 
     IEnumerator hideCloseCanvas(){
-        //Set the timer to 10 seconds
+        //Set the timer to 6 seconds
         targetTime = 6;
         
-        //Wait for 10 seconds
+        //Wait for 6 seconds
         yield return new WaitForSeconds(6);
 
         //Hide the close menu canvas
         finalCloseMenuCanvas.SetActive(false);
 
         //Show the initial close menu button
-        firstCloseMenuCanvas.GetComponent<Renderer>().enabled = true;
+        canvasGroup.alpha = 1f;
     }
 
     public void countDownTimer(){
