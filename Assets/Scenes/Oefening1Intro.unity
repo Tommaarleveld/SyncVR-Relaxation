@@ -2202,7 +2202,7 @@ PrefabInstance:
     - target: {fileID: 1263382972020159313, guid: 2536a0e1c0d9545dfa68265dbce85d37,
         type: 3}
       propertyPath: delays.Array.data[0]
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1263382972020159313, guid: 2536a0e1c0d9545dfa68265dbce85d37,
         type: 3}
