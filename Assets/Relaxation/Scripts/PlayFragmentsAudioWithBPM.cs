@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayFragmentsAudio : MonoBehaviour {
+public class PlayFragmentsAudioWithBPM : MonoBehaviour {
 	public AudioSource audioSource;
 	public AudioClip[] clips;
 	public int[] delays;
@@ -28,16 +28,27 @@ public class PlayFragmentsAudio : MonoBehaviour {
 			// Assign current AudioClip to audiosource
 			audioSource.clip = clips[i];
 
-			//Check the delaytime, if its longer than 22 seconds play the feedback audio
-			if (delays[i] >= 22){
+			//Check the delaytime, if its longer than 20 seconds get the BPM state and play the feedback accordingly
+			if (delays[i] >= 22 && ObservePulseData.getBPMState() != "NEUTRAL"){
 				//Wait for the first half of the delay	
 				yield return new WaitForSeconds(delays[i] / 2);
 
-				//Play the general feedback audio
-				playBPMScript.giveGeneralFeedback();
+				if (ObservePulseData.getBPMState() == "HIGH"){
+					Debug.Log("General feedback is supposed to start playing now");
+					//Play the feedback and wait for it to finish playing.
+					playBPMScript.giveGeneralFeedback();
 					while (playBPMScript.audioSource.isPlaying){
-						yield return null;
+					yield return null;
 					}
+				}
+				else if(ObservePulseData.getBPMState() == "DESCENDING"){
+					Debug.Log("General feedback is supposed to start playing now");
+					//Play the feedback and wait for it to finish playing.
+					playBPMScript.giveBPMFeedback();
+					while (playBPMScript.audioSource.isPlaying){
+					yield return null;
+					}
+				}
 
 				//Wait for the second half of the delay
 				yield return new WaitForSeconds(delays[i] / 2);
